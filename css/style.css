@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #0c5adb;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.top-header {
+    padding: 20px 0px;
+    color: white;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-header--links,
+.top-header--social-links {
+    display: flex;
+    column-gap: 20px;
+}
+
+.top-header--link span {
+    font-weight: 900;
+    display: inline-block;
+    margin-right: 5px;
+}
+.top-header--social-links a {
+    text-decoration: none;
+    color: white;
+}
