@@ -5,7 +5,6 @@
 }
 body {
     height: 500vh;
-    background-color: #232323;
 }
 .container {
     max-width: 1200px;
@@ -16,11 +15,58 @@ body {
     position: sticky;
     top: 0;
     background-color: white;
+    z-index: 1000;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 20px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 18px;
+}
+
+.btn-primary {
+    color: white;
+    background: rgb(12, 90, 219);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    background-color: rgba(12, 90, 219, 0.8);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-secondary {
+    border: 0.5px solid white;
+    background: transparent;
+    color: white;
 }
 
 .arrow-down {
     margin-top: 6px;
 }
+
+.mb-sm {
+    margin-bottom: 20px;
+}
+
+.heading-primary {
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.heading-main {
+    font-size: 60px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+.heading-white {
+    color: white;
+}
+
 /* HEADER */
 header {
     background-color: #0c5adb;
@@ -139,4 +185,44 @@ header {
     display: flex;
     gap: 5px;
     align-items: center;
+}
+
+/* HERO SECTION */
+
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    clip-path: ellipse(100% 80% at 51.51% 20.62%);
+    position: relative;
+}
+
+.hero-section--bg-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* Background image */
+.hero-section--bg {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-section--content {
+    position: inherit;
+    max-width: 800px;
+    z-index: 10;
+    margin-left: 100px;
+}
+
+.hero-section--cta-box {
+    display: flex;
+    gap: 20px;
 }
