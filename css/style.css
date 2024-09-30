@@ -226,3 +226,56 @@ header {
     display: flex;
     gap: 20px;
 }
+
+/* SERVICE SECTION */
+
+.services-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    transform: translateY(-40px);
+    column-gap: 20px;
+}
+
+.service-section--card {
+    perspective: 1500px;
+    -moz-perspective: 1500px;
+}
+.service-section--card-front,
+.service-section--card-back {
+    padding: 50px 30px;
+    transition: all 0.8s ease-in-out;
+}
+
+.service-section--card-back {
+    transform: rotate(-180deg);
+}
+.service-section--card-front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.service-section--card-icon {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: #0c5adb;
+}
+
+.service-section--card-text {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #232323;
+    font-weight: 500;
+}
+
+.service-section--card:hover .service-section--card-front {
+    transform: rotateY(-180deg);
+}
+.service-section--card:hover .service-section--card-back {
+    transform: rotateY(0);
+}
