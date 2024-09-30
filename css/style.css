@@ -239,15 +239,34 @@ header {
 .service-section--card {
     perspective: 1500px;
     -moz-perspective: 1500px;
+    height: 300px;
+    position: relative;
 }
 .service-section--card-front,
 .service-section--card-back {
     padding: 50px 30px;
-    transition: all 0.8s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
 }
 
 .service-section--card-back {
-    transform: rotate(-180deg);
+    background-color: #0c5adb;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-section--card-back {
+    transform: rotateY(-180deg);
 }
 .service-section--card-front {
     display: flex;
@@ -271,6 +290,19 @@ header {
     font-size: 1.5rem;
     color: #232323;
     font-weight: 500;
+}
+
+.service-section--card-back-heading {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.service-section--card-back-text {
+    text-align: center;
+    font-size: 1rem;
+    color: white;
 }
 
 .service-section--card:hover .service-section--card-front {
