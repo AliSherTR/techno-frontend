@@ -346,4 +346,39 @@ header {
     font-size: 22px;
     color: #54595f;
     font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.about-us-section--content-items {
+    display: grid;
+    grid-template-columns: 40px auto;
+    column-gap: 20px;
+    margin-top: 20px;
+}
+.about-us-section--content-items-icon {
+    font-size: 42px;
+    color: #0c5adb;
+    grid-column: 1 / 1;
+    grid-row-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display: flex;
+    align-items: center;
+}
+
+.about-us-section--content-items-heading,
+.about-us-section--content-items-text {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.about-us-section--content-items-heading {
+    font-size: 22px;
+    color: #232323;
+    margin-bottom: 5px;
+}
+.about-us-section--content-items-text {
+    font-size: 18px;
+    color: #54595f;
+    margin-bottom: 10px;
 }
