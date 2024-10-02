@@ -25,6 +25,7 @@ body {
     cursor: pointer;
     border-radius: 3px;
     font-size: 18px;
+    margin: 20px 0;
 }
 
 .btn-primary {
@@ -65,6 +66,9 @@ body {
 }
 .heading-white {
     color: white;
+}
+
+.header--primary {
 }
 
 /* HEADER */
@@ -316,10 +320,12 @@ header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
+    margin-bottom: 24px;
 }
 
 .about-us-section--images--image {
     width: 100%;
+    height: 100%;
 }
 
 .about-us-section--content--sm-heading {
@@ -355,6 +361,10 @@ header {
     column-gap: 20px;
     margin-top: 20px;
 }
+
+.about-us-section--content-items:last-child {
+    margin-bottom: 20px;
+}
 .about-us-section--content-items-icon {
     font-size: 42px;
     color: #0c5adb;
@@ -381,4 +391,105 @@ header {
     font-size: 18px;
     color: #54595f;
     margin-bottom: 10px;
+}
+.about-us-section--cta {
+    margin-top: 20px;
+    display: block;
+}
+
+/* ALL SERVICES SECTION */
+
+.all-services-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-image: url(https://wp.ditsolution.net/techno-new/wp-content/uploads/2023/10/service-bg.jpg);
+}
+
+.all-services-section--content {
+    max-width: 1200px;
+    margin: auto;
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.all-services-section--card {
+    /* padding: 20px 30px; */
+    background-color: transparent;
+    perspective: 1500px;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+
+.all-services-section--card-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    border: 1px solid #0c5adb;
+    border-radius: 5px;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease-in-out;
+}
+
+.all-services-section--card-front,
+.all-services-section--card-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.all-services-section--card-back {
+    background-color: rgba(12, 90, 219, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(-180deg);
+}
+
+/* Front face of the card */
+.all-services-section--card-front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+}
+
+.all-services-section--card:hover .all-services-section--card-wrapper {
+    transform: rotateY(180deg);
+}
+
+.all-services-section--card-front-icon {
+    font-size: 44px;
+    color: white;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+
+.all-services-section--card-front-heading {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.all-services-section--card-front-text {
+    font-size: 18px;
+    text-align: center;
+    color: white;
 }
